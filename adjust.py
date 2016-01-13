@@ -29,8 +29,7 @@ import sys
 __author__ = 'aungthiha'
 
 arrow = ' --> '
-dot_pat = r'(\d\d:\d\d:\d\d\.\d\d\d) --> (\d\d:\d\d:\d\d\.\d\d\d)'
-comma_pat = r'(\d\d:\d\d:\d\d\,\d\d\d) --> (\d\d:\d\d:\d\d\,\d\d\d)'
+pat = r'(\d\d:\d\d:\d\d.\d\d\d) --> (\d\d:\d\d:\d\d.\d\d\d)'
 
 
 def change_time(t_str):
@@ -52,8 +51,7 @@ def adjust_time(hours, minutes, seconds, is_decrease_str, content):
     global is_decrease, adjustment
     is_decrease = is_decrease_str == '-d'
     adjustment = timedelta(hours=hours, minutes=minutes, seconds=seconds)
-    content = re.sub(dot_pat, repl, content)
-    content = re.sub(comma_pat, repl, content)
+    content = re.sub(pat, repl, content)
     return content
 
 
