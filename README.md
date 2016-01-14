@@ -13,6 +13,7 @@ A script to Adjust time in subtitle
 
 Open up your terminal or command prompt and enter the following command to download
 * $ git clone https://github.com/AungThiha/Adjust_Subtitle_Time.git
+
 Alternatively, you can download by clicking **Download Zip** button.
 
 
